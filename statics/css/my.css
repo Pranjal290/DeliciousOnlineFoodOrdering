@@ -1,0 +1,19 @@
+.form-check-input:checked{
+background-color: #FFA012 !important;
+border-color: #FFA012 !important;
+}
+.food-category{
+position : relative;
+
+}
+
+
+.food-category:before{
+position : absolute;
+top : -13px;
+left : -20px;
+content : "";
+width : 10px;
+height : 100%;
+background-color : #FFA012;
+}
