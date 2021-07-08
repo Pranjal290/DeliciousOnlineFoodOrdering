@@ -1,0 +1,147 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+{% load static %}
+{% include 'customer/all_other_navigation.html' %}
+
+
+<section id="about" class="about">
+              <div class="section-title"><h2>About<span> Us</span></h2></div>
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-5 align-items-stretch">
+           <img src="{% static  '/img/Restaurant-About.jpg' %}" style="object-fit:cover" height="100%" width="100%"/>
+          </div>
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+            <div class="content">
+              <p>
+               Established in 2017, Delicious is a locally-owned, independent catering and restaurant service.
+              </p>
+              <p class="fst-italic">
+               Four years later, we’re still happily serving the University Students with quality fresh food. Our catering service has grown to become one of Pantnagar's largest and most recognized services.
+              </p>
+              <ul>
+                <li><i class="bx bx-check-double"></i> It’s simple: “YUM!” is always our goal. Because everything you eat should be packed with flavor and full of joy. </li>
+                <li><i class="bx bx-check-double"></i> Food has that magic ability of bringing people together to laugh, to celebrate, to connect — and no one should ever be excluded. </li>
+                <li><i class="bx bx-check-double"></i> We promise to always push ourselves to offer the best food possible, again and again.</li>
+              </ul>
+              <p>
+                We’re transforming what it means to be convenient and delicious. Every product we offer — today and tomorrow — is crafted with fresh, best-quality, Rich, and healthy ingredients. Because everyone deserves delicious food made with love.
+
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+ <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Why choose <span>Our Restaurant</span></h2>
+          <p> Focusing on quality, we bring only the best food for you. </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box">
+              <span>01</span>
+              <h4>Fresh food</h4>
+              <p>Our food is made fresh every day with ingredients. We bring the best taste in our cooking to make your day happier and healthier. No matter which season is going on but giving you extraordinary is a part of our service.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>02</span>
+              <h4>Superior Value </h4>
+              <p>If you are looking for value for money, We Deliver! You will receive a fresh 100% home  made dish in a portion size that won’t leave you scrapping your plate.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>03</span>
+              <h4> Mouthwatering Meals</h4>
+              <p>All the meals that are prepared by the hotel’s restaurant meet the highest standards as far as taste and nutrition are concerned.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+<!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Professional <span>Chefs</span></h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src = "{% static 'img/chefs/Sanjeev_Kapoor.jpg' %}" width = "450" height = "450" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sanjeev Kapoor</h4>
+                <span>Master Chef</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'img/chefs/Kunal_Kapur.jpg' %}" width = "450" height = "450" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Kunal Kapur</h4>
+                <span>Master Chef</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'img/chefs/VikasKhanna.jpg' %}" width = "450" height = "450" class="img-fluid" alt="" ></div>
+              <div class="member-info">
+                <h4>Vikas Khanna</h4>
+                <span>Master Chef</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'customer/all_other_navigation.html' %}
+<!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials" style="min-height:80vh; display: flex; align-items : center">
+      <div class="container position-relative" >
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100" >
+          <div class="swiper-wrapper" >
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static  'img/testimonials/harshit-saini.png' %}" class="testimonial-img" alt="">
+                <h3>Harshit Saini</h3>
+                <h4> Assistant Systems Engineer (TCS)</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Food was excellent, very delicious and affordable. I recommend it to everyone. I would surely order again.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static  'img/testimonials/Kartikeya-Nautiyal.jfif' %}" class="testimonial-img" alt="">
+                <h3>Kartikeya Nautiyal</h3>
+                <h4>System Engineer Specialist (Infosys)</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  The food is excellent, generous portions and great prices. The service was fast and friendly. I highly recommended it.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static  'img/testimonials/Gaurav_Pathak.jpeg' %}" class="testimonial-img" alt="">
+                <h3>Gaurav Pathak</h3>
+                <h4>Software Engineer (Mindtree)</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Been ordering from here for 14+ months. Never disappointed. Good service combined with good food.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static  'img/testimonials/Rajat_Gupta.jpg' %}" class="testimonial-img" alt="">
+                <h3>Rajat Gupta</h3>
+                <h4>Associate Software Engineer (Accenture)</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Absolutely the very best restaurant for Breakfast, Lunch & Dinner!!!! I Love this Restaurant!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+<!--            <div class="swiper-slide">-->
+<!--              <div class="testimonial-item">-->
+<!--                <img src="{% static  'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">-->
+<!--                <h3>John Larson</h3>-->
+<!--                <h4>Entrepreneur</h4>-->
+<!--                <div class="stars">-->
+<!--                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>-->
+<!--                </div>-->
+<!--                <p>-->
+<!--                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>-->
+<!--                  Great food, Stuffed Mushrooms was delicious! Great Μai Tai, and the service was spot on.-->
+<!--                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+{% endblock content %}

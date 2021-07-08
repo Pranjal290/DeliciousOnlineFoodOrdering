@@ -1,0 +1,190 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+{% include 'customer/all_other_navigation.html' %}
+<div class="container-fluid container-md  mb-5 pt-5">
+    <div class="section-title text-center">
+    <h2>Order your <span>food items</span></h2>
+    </div>
+    <div class="row">
+        <div class="col-12 p-4">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="pt-5">
+                    <div class="section-title food-category mb-3 d-flex align-items-center" style="height: 3rem">
+                        <h2 class="text-start ms-3  d-flex align-items-center" >
+                            Appetizers
+                        </h2>
+                    </div>
+                    {% for item in appetizers %}
+                    <div class="d-flex flex-wrap py-2 ps-1">
+                        <div class="flex-grow-0 me-3" style="width: 150px">
+                            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" style="object-fit:cover"/>
+                        </div>
+                        <div class="flex-grow-1 ps-lg-5 ps-0 pt-4 pt-md-3" style="width:80%">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                    <label class="form-check-label fw-bold" style="color: #FFA012" >{{ item.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5 fw-bold ms-3">₹{{ item.price }}</p>
+                            </div>
+                            <p class="fst-italic">{{ item.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+
+                <div class="pt-5">
+                    <div class="section-title food-category mb-3 d-flex align-items-center" style="height: 3rem">
+                        <h2 class="text-start ms-3  d-flex align-items-center" >
+                            Main Course
+                        </h2>
+                    </div>
+                    {% for item in main_courses %}
+                    <div class="d-flex flex-wrap py-2 ps-1">
+                        <div class="flex-grow-0 me-3" style="width: 150px">
+                            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" style="object-fit:cover"/>
+                        </div>
+                        <div class="flex-grow-1 ps-lg-5 ps-0 pt-4 pt-md-3" style="width:80%">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                    <label class="form-check-label fw-bold" style="color: #FFA012" >{{ item.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5 fw-bold ms-3">₹{{ item.price }}</p>
+                            </div>
+                            <p class="fst-italic">{{ item.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+                <div class="pt-5">
+                    <div class="section-title food-category mb-3 d-flex align-items-center" style="height: 3rem">
+                        <h2 class="text-start ms-3  d-flex align-items-center" >
+                            Desserts
+                        </h2>
+                    </div>
+                    {% for item in desserts %}
+                    <div class="d-flex flex-wrap py-2 ps-1">
+                        <div class="flex-grow-0 me-3" style="width: 150px">
+                            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" style="object-fit:cover"/>
+                        </div>
+                        <div class="flex-grow-1 ps-lg-5 ps-0 pt-4 pt-md-3" style="width:80%">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                    <label class="form-check-label fw-bold" style="color: #FFA012" >{{ item.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5 fw-bold ms-3">₹{{ item.price }}</p>
+                            </div>
+                            <p class="fst-italic">{{ item.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+                <div class="pt-5">
+                    <div class="section-title food-category mb-3 d-flex align-items-center" style="height: 3rem">
+                        <h2 class="text-start ms-3  d-flex align-items-center" >
+                            Drinks
+                        </h2>
+                    </div>
+                    {% for item in drinks %}
+                    <div class="d-flex flex-wrap py-2 ps-1">
+                        <div class="flex-grow-0 me-3" style="width: 150px">
+                            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" style="object-fit:cover"/>
+                        </div>
+                        <div class="flex-grow-1 ps-lg-5 ps-0 pt-4 pt-md-3" style="width:80%">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                    <label class="form-check-label fw-bold" style="color: #FFA012" >{{ item.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5 fw-bold ms-3">₹{{ item.price }}</p>
+                            </div>
+                            <p class="fst-italic">{{ item.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+
+                <div style="max-width: 400px">
+
+                <div class="section-title food-category mb-3 d-flex align-items-center mt-5" style="height: 3rem">
+                        <h2 class="text-start ms-3  d-flex align-items-center mt-2" >
+                            Enter Your Details
+                        </h2>
+                </div>
+
+                <div class="form-group pt-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input required class="form-control" type="text" placeholder="Your Name" name="name" />
+                </div>
+
+                <div class="form-group pt-3">
+                    <label for="name" class="form-label">Email Address</label>
+                    <input required class="form-control" type="text" placeholder="example@company.com" name="email" />
+                </div>
+
+                <div class="form-group pt-3">
+                    <label for="name" class="form-label">Street Address</label>
+                    <input required class="form-control" type="text" placeholder="1234 Main St" name="street" />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="name" class="form-label">City</label>
+                            <input required class="form-control" type="text" placeholder="New Delhi" name="city" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="name" class="form-label">State</label>
+                            <input required class="form-control" type="text" placeholder="Delhi" name="state" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-group pt-3">
+                            <label for="name" class="form-label">Zip Code</label>
+                            <input required class="form-control" type="text" placeholder="110001" name="zip" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-dark mt-3" data-toggle="modal" data-target="#submitModal">
+                  Submit Order!
+                </button>
+                <!-- <button class="btn btn-dark mt-5">Place Order!</button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="submitModalLabel">Submit Your Order!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Go Back</button>
+                        <button type="submit" class="btn btn-dark">Place Order!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

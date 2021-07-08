@@ -1,0 +1,24 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center " style="position : sticky; top: 0; left: 0; right: 0">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto d-flex align-items-center">
+        <h1><a href="{% url 'index' %}">Delicious</a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 1000">
+        <ul>
+          <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'menu' %}">Menu</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'testimonial' %}">Reviews</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">About Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="{% url 'order' %}" class="book-a-table-btn scrollto">Place an Order!</a>
+
+    </div>
+  </header><!-- End Header -->

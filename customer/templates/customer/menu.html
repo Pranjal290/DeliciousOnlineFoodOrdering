@@ -1,0 +1,76 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+{% include 'customer/all_other_navigation.html' %}
+<section id="menu" class="menu" style="min-height:80vh">
+    <div class="container">
+
+        <div class="section-title">
+          <h2>Check our tasty <span>Menu</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">Show All</li>
+              <li data-filter=".filter-drink">Drinks</li>
+              <li data-filter=".filter-appetizer">Appetizers</li>
+              <li data-filter=".filter-main_course">Main Course</li>
+              <li data-filter=".filter-dessert">Desserts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container">
+            {% for items in appetizers %}
+                <div class="col-lg-6 menu-item filter-appetizer">
+                    <div class="menu-content">
+                        <a>{{ items.name }}</a><span>{{ items.price }}</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        {{ items.description }}
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            {% for items in main_courses %}
+                <div class="col-lg-6 menu-item filter-main_course">
+                    <div class="menu-content">
+                        <a>{{ items.name }}</a><span>{{ items.price }}</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        {{ items.description }}
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            {% for items in desserts %}
+                <div class="col-lg-6 menu-item filter-dessert">
+                    <div class="menu-content">
+                        <a>{{ items.name }}</a><span>{{ items.price }}</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        {{ items.description }}
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            {% for items in drinks %}
+                <div class="col-lg-6 menu-item filter-drink">
+                    <div class="menu-content">
+                        <a>{{ items.name }}</a><span>{{ items.price }}</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        {{ items.description }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}
